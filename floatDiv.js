@@ -1,13 +1,13 @@
 (function($){
 	$.fn.floatDiv = function(){
-		var config.selector = this;
-		var top = $(config.selector).offset().top;
+		var selector = this;
+		var top = $(selector).offset().top;
 		function historyScroll(){
 		   var diff = $(document).scrollTop();
 		   if(diff > top){
-		       $(config.selector).offset({top:diff});
+		       $(selector).offset({top:diff});
 		   }else{
-		     $(config.selector).offset().top > top ? $(config.selector).offset({top:top}): '';
+		     $(selector).offset().top > top ? $(selector).offset({top:top}): '';
 		   }
 		   
 		}
