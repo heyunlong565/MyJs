@@ -3,7 +3,7 @@
 		var selector = this;
 		var top = $(selector).offset().top;
 		function historyScroll(){
-		   var diff = $(document).scrollTop();
+		   var diff = $(window).scrollTop();
 		   if(diff > top){
 		       $(selector).offset({top:diff});
 		   }else{
@@ -11,7 +11,7 @@
 		   }
 		   
 		}
-		$(document).bind("scroll", historyScroll);
+		$(window).bind("scroll", historyScroll);
 	}
 
 })(jQuery)
